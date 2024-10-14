@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background-color: #0e0a3060; /* 背景颜色 */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* 设置最大宽度，以适应不同屏幕大小 */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+button {
+    margin-left: 5px;
+}
+
+video {
+    width: 100%; /* 视频宽度为容器宽度的100% */
+    height: auto;
+}

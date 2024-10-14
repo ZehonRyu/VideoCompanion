@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="videoTitle"></h1>
+        <div id="goToParentFolder">
+            <a href="#" id="returnToFolder">返回所在文件夹</a>
+        </div>
+        <video id="videoPlayer" controls width="640" height="360">
+            <source src="" type="video/mp4">
+            您的浏览器不支持视频标签。
+        </video>
+        <div id="videoDetails">
+            <p id="videoDescription"></p>
+            <p id="videoDuration"></p>
+            <p id="videoUploadDate"></p>
+        </div>
+        <div id="likeSection">
+            <button id="likeButton">点赞</button>
+            <p id="likeCount">点赞次数：0</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/video.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Folder Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 id="currentFolderName">当前文件夹</h1>
+    <div id="navigation">
+        <a id="goToRootFolder" href="#" style="display: inline;">返回根目录</a>
+        <a id="goToParentFolder" href="#" style="display: none;">返回上一级文件</a>
+    </div>
+    <h2>子文件夹</h2>
+    <ul id="subFolders"></ul>
+    <h2>视频列表</h2>
+    <table id="videoList">
+        <thead>
+            <tr>
+                <th>视频名字</th>
+                <th>
+                    点赞数
+                    <button class="sort-button" data-sort="likeCountDesc">降序</button>
+                    <button class="sort-button" data-sort="likeCountAsc">升序</button>
+                </th>
+                <th>
+                    视频时长
+                    <button class="sort-button" data-sort="durationDesc">降序</button>
+                    <button class="sort-button" data-sort="durationAsc">升序</button>
+                </th>
+                <th>
+                    上传时间
+                    <button class="sort-button" data-sort="uploadDateDesc">降序</button>
+                    <button class="sort-button" data-sort="uploadDateAsc">升序</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
